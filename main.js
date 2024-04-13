@@ -5,17 +5,21 @@ let obj = {
     },
     'php' : {
         'Основной учебник' : ['Основы', 'Массивы', 'Условия', 'Циклы', 'Многомерность', 'Стандартные функции', 'Пользовательские функции', 'Рекурсия', 'Регулярные выражения', 'Формирование строк', 'Формы', 'Сессии', 'Cookies', 'Файловая система', 'Базы данных', 'Организация БД', 'Практика БД', 'Работа с HTTP', 'Редиректы', 'Аутентификация', 'Движок сайта'],
+    },
+    'верстка' : {
+        'Основной учебник' : ['Основы HTML', 'Основы CSS', 'Селекторы', 'Оформление', 'Блочная модель', 'Позиционирование', 'Флоаты', 'Флексы', 'Гриды', 'Макеты'] ,
     }
 };
-let arr1 = ['js','php'];
+let arr1 = ['js','php', 'верстка'];
 let arr2 = ['Основной учебник', 'Высший учебник'];
+let k = 0;
 function getRundomInt(min, max){
     return Math.floor(Math.random() * (max-min + 1)) + min;
 }
 
 function getRundomTeam(){
 
-    let arr1Num = getRundomInt(0, arr1.length - 1);
+    let arr1Num = k++;
     let arr2Num = getRundomInt(0, arr2.length - 1);
     
     while(typeof obj[arr1[arr1Num]][arr2[arr2Num]] == 'undefined'){
@@ -30,3 +34,6 @@ function getRundomTeam(){
 }
 
 getRundomTeam();
+getRundomTeam();
+getRundomTeam();
+
